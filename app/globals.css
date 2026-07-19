@@ -1,0 +1,144 @@
+:root {
+  /* Marque Financia */
+  --brand: #002864;
+  --brand-600: #013a86;
+  --brand-500: #1e56a8;
+  --brand-tint: #e8eef6;
+
+  /* Neutres a legere teinte bleue */
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #16233b;
+  --text-muted: #5a6b85;
+  --text-faint: #8595ac;
+
+  /* Semantiques */
+  --ok: #1f9d6b;
+  --ok-tint: #e4f6ee;
+  --warn: #b7791f;
+  --warn-tint: #fbf1de;
+  --ko: #cf3b3b;
+  --ko-tint: #fbe6e6;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(16, 35, 66, 0.04), 0 4px 16px rgba(16, 35, 66, 0.05);
+  --maxw: 1160px;
+  --font: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #4d8bde;
+    --brand-600: #6fa2e6;
+    --brand-500: #3f79c9;
+    --brand-tint: #16233d;
+
+    --bg: #0c1220;
+    --surface: #131c2e;
+    --surface-2: #17223a;
+    --border: #243449;
+    --border-strong: #33465f;
+    --text: #e7edf6;
+    --text-muted: #9fb0c7;
+    --text-faint: #6c7f9a;
+
+    --ok: #46c088;
+    --ok-tint: #12352a;
+    --warn: #e0a94b;
+    --warn-tint: #37301c;
+    --ko: #ef6f68;
+    --ko-tint: #3a1e1e;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+:root[data-theme="light"] {
+  --brand: #002864;
+  --brand-600: #013a86;
+  --brand-500: #1e56a8;
+  --brand-tint: #e8eef6;
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #16233b;
+  --text-muted: #5a6b85;
+  --text-faint: #8595ac;
+  --ok: #1f9d6b;
+  --ok-tint: #e4f6ee;
+  --warn: #b7791f;
+  --warn-tint: #fbf1de;
+  --ko: #cf3b3b;
+  --ko-tint: #fbe6e6;
+  --shadow: 0 1px 2px rgba(16, 35, 66, 0.04), 0 4px 16px rgba(16, 35, 66, 0.05);
+}
+
+:root[data-theme="dark"] {
+  --brand: #4d8bde;
+  --brand-600: #6fa2e6;
+  --brand-500: #3f79c9;
+  --brand-tint: #16233d;
+  --bg: #0c1220;
+  --surface: #131c2e;
+  --surface-2: #17223a;
+  --border: #243449;
+  --border-strong: #33465f;
+  --text: #e7edf6;
+  --text-muted: #9fb0c7;
+  --text-faint: #6c7f9a;
+  --ok: #46c088;
+  --ok-tint: #12352a;
+  --warn: #e0a94b;
+  --warn-tint: #37301c;
+  --ko: #ef6f68;
+  --ko-tint: #3a1e1e;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
