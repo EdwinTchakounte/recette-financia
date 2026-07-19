@@ -246,7 +246,7 @@ export default function RecetteApp() {
     doc.setFont("helvetica", "bold");
     doc.setFontSize(16);
     doc.setTextColor(...brand);
-    doc.text(`Recette Financia — ${PLATEFORME_LABEL[plateforme]}`, 40, 46);
+    doc.text(`Recette Financia RH — ${PLATEFORME_LABEL[plateforme]}`, 40, 46);
 
     doc.setFont("helvetica", "normal");
     doc.setFontSize(10);
@@ -310,11 +310,16 @@ export default function RecetteApp() {
       <header className={styles.topbar}>
         <div className={styles.topbarInner}>
           <div className={styles.brand}>
-            <div className={styles.logo}>
-              <span>F</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className={styles.logo}
+              src="/logo-financia-white.svg"
+              alt="Financia RH"
+              width={40}
+              height={40}
+            />
             <div className={styles.brandText}>
-              <b>Financia</b>
+              <b>Financia RH</b>
               <small>Tests a realiser</small>
             </div>
           </div>
@@ -543,8 +548,8 @@ export default function RecetteApp() {
       </main>
 
       <footer className={styles.footer}>
-        Financia — plan de recette. Coche chaque test au fur et a mesure ; ton
-        avancement reste enregistre sur cet appareil.
+        Financia RH — plan de recette. Coche chaque test au fur et a mesure ;
+        ton avancement reste enregistre sur cet appareil.
       </footer>
     </div>
   );
