@@ -471,26 +471,3 @@ ouvert pour une duree limitee.
 
 ![Capture a inserer: acces restreint et demande de consultation mobile](captures/mobile/m-admin-consult.png)
 
-
-# Non couvert pour le moment
-
-Fonctionnalites pas encore disponibles dans l'application. Elles sont listees
-ici pour memoire : il n'y a rien a tester dessus pour l'instant.
-
-## Site web
-
-### Modifier ou supprimer une saisie
-L'edition et la suppression d'une saisie ne sont pas encore disponibles sur le
-site web. Elles existent sur l'application mobile (voir m-saisie-edit). Sur le
-web, une saisie se consulte mais ne se modifie pas.
-
-### Contester le refus d'une saisie
-Le depot d'une contestation se fait sur l'application mobile (voir m-contest).
-Le site web permet seulement de suivre ses contestations et, cote manager, de
-les traiter.
-
-## Application mobile
-
-### Ajouter une note sur un dossier
-L'application mobile affiche les notes d'un dossier mais ne permet pas encore
-d'en ajouter. La creation d'une note n'est pas disponible.

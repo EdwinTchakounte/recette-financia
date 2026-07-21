@@ -2,7 +2,6 @@
 // Un seul mot de passe pour tous les comptes : Demo2026!
 //
 // Ne couvre que des fonctionnalites reellement presentes dans le code.
-// Ce qui n'est pas encore disponible est liste dans NON_COUVERT (recette.ts).
 
 import type { Section } from "./recette-types";
 

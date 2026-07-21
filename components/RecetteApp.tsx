@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   RECETTE,
-  NON_COUVERT,
   PROFIL_LABEL,
   PROFIL_ORDER,
   PLATEFORME_LABEL,
@@ -546,25 +545,6 @@ export default function RecetteApp() {
             </div>
           </section>
         ))}
-
-        {NON_COUVERT[plateforme].length > 0 && (
-          <section className={styles.section}>
-            <div className={styles.sectionHead}>
-              <span className={styles.sectionProfil}>A venir</span>
-              <h2>Non couvert pour le moment</h2>
-            </div>
-            <div className={styles.grid}>
-              {NON_COUVERT[plateforme].map((nc) => (
-                <article key={nc.id} className={styles.card}>
-                  <h3 className={styles.cardTitle}>{nc.titre}</h3>
-                  <div className={styles.block}>
-                    <p className={styles.attendu}>{nc.detail}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
       </main>
 
       <footer className={styles.footer}>

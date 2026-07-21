@@ -25,15 +25,6 @@ export type Section = {
   cas: CasTest[];
 };
 
-// Fonctionnalite pas encore disponible dans l'application : listee a titre
-// informatif (pas de test a cocher), pour dire clairement ce qui reste a venir.
-export type NonCouvert = {
-  id: string;
-  titre: string;
-  // Pourquoi ce n'est pas encore testable, en une phrase simple.
-  detail: string;
-};
-
 export type Compte = {
   email: string;
   role: Profil;
