@@ -58,6 +58,33 @@ cloche se met a jour.
 ![Capture a inserer: liste des notifications et compteur cloche](captures/web/w-notifs.png)
 
 
+### w-profil. Consulter et mettre a jour son profil
+**A faire :**
+1. Ouvrir son profil.
+2. Verifier ses informations (nom, email, role, manager).
+3. Modifier son profil metier, puis enregistrer.
+
+**Attendu :** les informations du compte sont correctes. La mise a jour du profil
+metier est enregistree, et les statistiques d'activite recente s'affichent.
+
+**Capture :** ecran du profil avec les informations et les statistiques.
+
+![Capture a inserer: profil utilisateur web](captures/web/w-profil.png)
+
+
+### w-dossier-detail. Consulter le detail d'un dossier
+**A faire :**
+1. Ouvrir la liste des dossiers.
+2. Ouvrir un dossier.
+3. Parcourir les onglets Informations, Equipe et Historique.
+
+**Attendu :** le dossier s'affiche avec ses informations, son equipe et son historique.
+
+**Capture :** detail d'un dossier avec ses onglets.
+
+![Capture a inserer: detail d'un dossier web](captures/web/w-dossier-detail.png)
+
+
 ## Collaborateur
 
 ### w-saisie-create. Saisir une activite
@@ -168,6 +195,34 @@ aux managers et aux administrateurs : un collaborateur ne le voit pas dans le me
 ![Capture a inserer: tableau de bord manager](captures/web/w-dashboard.png)
 
 
+### w-dossier-attach. Joindre des fichiers a un dossier
+**A faire :**
+1. Ouvrir un dossier, onglet Pieces jointes.
+2. Deposer un fichier (glisser-deposer ou parcourir).
+3. Ouvrir l'apercu du fichier, puis le supprimer si besoin.
+
+**Attendu :** le fichier est ajoute au dossier, l'apercu s'affiche et la suppression
+fonctionne.
+
+**Capture :** onglet Pieces jointes d'un dossier.
+
+![Capture a inserer: pieces jointes d'un dossier web](captures/web/w-dossier-attach.png)
+
+
+### w-consult-decide. Decider une demande de consultation
+**A faire :**
+1. Ouvrir les Demandes de consultation, onglet A decider.
+2. Ouvrir une demande recue.
+3. Cliquer Approuver ou Refuser.
+
+**Attendu :** la decision est enregistree. Si approuvee, le demandeur obtient l'acces
+au contenu pour une duree limitee.
+
+**Capture :** decision d'une demande de consultation.
+
+![Capture a inserer: decision d'une demande de consultation](captures/web/w-consult-decide.png)
+
+
 ## Administrateur
 
 ### w-admin-dashboard. Voir le tableau de bord a l'echelle du cabinet
@@ -219,6 +274,62 @@ derriere un bandeau "Contenu restreint" tant que la demande n'est pas approuvee.
 **Capture :** bandeau "Contenu restreint" et bouton de demande de consultation.
 
 ![Capture a inserer: contenu restreint et demande de consultation](captures/web/w-admin-consult.png)
+
+
+### w-dossier-note. Publier une note sur un dossier
+**A faire :**
+1. Ouvrir un dossier, onglet Notes admin.
+2. Cliquer Publier une note, ecrire la note, puis publier.
+
+**Attendu :** la note est publiee sur le dossier et visible par le manager et les
+collaborateurs concernes.
+
+**Capture :** note admin publiee sur un dossier.
+
+![Capture a inserer: note admin sur un dossier](captures/web/w-dossier-note.png)
+
+
+### w-users. Gerer les utilisateurs
+**A faire :**
+1. Ouvrir la liste des utilisateurs.
+2. Creer un utilisateur.
+3. Ouvrir un utilisateur, modifier ses informations, changer son role ou son manager.
+4. Desactiver puis reactiver un utilisateur.
+
+**Attendu :** les utilisateurs se creent et se modifient. Le changement de role ou de
+manager est pris en compte. Un utilisateur desactive ne peut plus se connecter.
+
+**Capture :** gestion des utilisateurs (liste et formulaire).
+
+![Capture a inserer: gestion des utilisateurs](captures/web/w-users.png)
+
+
+### w-permissions. Gerer les droits d'un utilisateur
+**A faire :**
+1. Ouvrir la page des permissions.
+2. Accorder un droit a un utilisateur (choisir la ressource, l'action, l'echeance).
+3. Revoquer un droit accorde.
+
+**Attendu :** le droit est accorde ou revoque, et l'utilisateur gagne ou perd l'acces
+correspondant.
+
+**Capture :** page des permissions avec un droit accorde.
+
+![Capture a inserer: gestion des permissions](captures/web/w-permissions.png)
+
+
+### w-referentiels. Gerer les listes de reference
+**A faire :**
+1. Ouvrir la page des referentiels.
+2. Ajouter une entree (par exemple un type d'activite).
+3. Modifier une entree, puis en desactiver une.
+
+**Attendu :** les entrees se creent, se modifient et se desactivent. Elles alimentent
+les listes deroulantes des formulaires.
+
+**Capture :** page des referentiels avec une entree.
+
+![Capture a inserer: gestion des referentiels](captures/web/w-referentiels.png)
 
 
 # Application mobile
@@ -279,6 +390,20 @@ disparait.
 **Capture :** saisie avec le badge "Local" avant synchronisation.
 
 ![Capture a inserer: badge Local sur une saisie hors ligne](captures/mobile/m-offline.png)
+
+
+### m-sync. Synchroniser et gerer la file d'attente
+**A faire :**
+1. Ouvrir la File de synchronisation depuis le profil.
+2. Toucher Synchroniser maintenant.
+3. Le cas echeant, resoudre un conflit ou relancer une operation en echec.
+
+**Attendu :** la file se vide et les saisies en attente partent. En cas de conflit, le
+choix Garder le serveur ou Reappliquer est propose.
+
+**Capture :** ecran de la file de synchronisation.
+
+![Capture a inserer: file de synchronisation mobile](captures/mobile/m-sync.png)
 
 
 ## Collaborateur
@@ -364,6 +489,44 @@ s'affichent. Il n'y a pas de bouton de creation pour un collaborateur.
 ![Capture a inserer: liste des dossiers collaborateur mobile](captures/mobile/m-dossiers.png)
 
 
+### m-dossier-detail. Ouvrir le detail d'un dossier
+**A faire :**
+1. Ouvrir la liste des dossiers.
+2. Toucher un dossier.
+
+**Attendu :** le dossier s'affiche avec ses informations, ses notes et la liste de ses
+saisies.
+
+**Capture :** detail d'un dossier mobile.
+
+![Capture a inserer: detail d'un dossier mobile](captures/mobile/m-dossier-detail.png)
+
+
+### m-saisie-detail. Ouvrir une saisie et lire ses details
+**A faire :**
+1. Ouvrir une saisie depuis Mes saisies.
+
+**Attendu :** la saisie s'affiche avec le dossier, le type, la duree, la date, le
+commentaire et les pieces jointes.
+
+**Capture :** detail d'une saisie mobile.
+
+![Capture a inserer: detail d'une saisie mobile](captures/mobile/m-saisie-detail.png)
+
+
+### m-saisie-search. Rechercher et filtrer ses saisies
+**A faire :**
+1. Ouvrir Mes saisies.
+2. Utiliser la recherche, filtrer par statut, changer de mois.
+
+**Attendu :** la liste se met a jour selon la recherche, le statut choisi et le mois
+affiche.
+
+**Capture :** recherche et filtres dans Mes saisies.
+
+![Capture a inserer: recherche et filtres des saisies mobile](captures/mobile/m-saisie-search.png)
+
+
 ## Manager
 
 ### m-to-validate. Voir les saisies a valider
@@ -428,6 +591,19 @@ manager a le droit de creer des dossiers.
 **Capture :** gestion des collaborateurs d'un dossier.
 
 ![Capture a inserer: collaborateurs d'un dossier mobile](captures/mobile/m-dossier-collab.png)
+
+
+### m-consult-list. Suivre les demandes de consultation
+**A faire :**
+1. Ouvrir les Demandes de consultation.
+2. Parcourir la file A decider (et, pour un admin, l'onglet Mes demandes).
+
+**Attendu :** les demandes s'affichent avec leur statut (en attente, active, expiree,
+refusee).
+
+**Capture :** liste des demandes de consultation mobile.
+
+![Capture a inserer: demandes de consultation mobile](captures/mobile/m-consult-list.png)
 
 
 ## Administrateur

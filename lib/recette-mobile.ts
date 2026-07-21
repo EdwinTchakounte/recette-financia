@@ -54,6 +54,17 @@ export const MOBILE_SECTIONS: Section[] = [
         attendu:
           "La saisie est enregistree meme sans internet : elle porte un badge Local. Des que le telephone retrouve internet, elle part toute seule et le badge disparait.",
       },
+      {
+        id: "m-sync",
+        titre: "Synchroniser et gerer la file d'attente",
+        aFaire: [
+          "Ouvrir la File de synchronisation depuis le profil.",
+          "Toucher Synchroniser maintenant.",
+          "Le cas echeant, resoudre un conflit ou relancer une operation en echec.",
+        ],
+        attendu:
+          "La file se vide et les saisies en attente partent. En cas de conflit, le choix Garder le serveur ou Reappliquer est propose.",
+      },
     ],
   },
 
@@ -124,6 +135,35 @@ export const MOBILE_SECTIONS: Section[] = [
         attendu:
           "Les dossiers sur lesquels le collaborateur a le droit de saisir s'affichent. Il n'y a pas de bouton de creation pour un collaborateur.",
       },
+      {
+        id: "m-dossier-detail",
+        titre: "Ouvrir le detail d'un dossier",
+        aFaire: [
+          "Ouvrir la liste des dossiers.",
+          "Toucher un dossier.",
+        ],
+        attendu:
+          "Le dossier s'affiche avec ses informations, ses notes et la liste de ses saisies.",
+      },
+      {
+        id: "m-saisie-detail",
+        titre: "Ouvrir une saisie et lire ses details",
+        aFaire: [
+          "Ouvrir une saisie depuis Mes saisies.",
+        ],
+        attendu:
+          "La saisie s'affiche avec le dossier, le type, la duree, la date, le commentaire et les pieces jointes.",
+      },
+      {
+        id: "m-saisie-search",
+        titre: "Rechercher et filtrer ses saisies",
+        aFaire: [
+          "Ouvrir Mes saisies.",
+          "Utiliser la recherche, filtrer par statut, changer de mois.",
+        ],
+        attendu:
+          "La liste se met a jour selon la recherche, le statut choisi et le mois affiche.",
+      },
     ],
   },
 
@@ -181,6 +221,16 @@ export const MOBILE_SECTIONS: Section[] = [
         ],
         attendu:
           "Les collaborateurs affectes peuvent ensuite saisir sur ce dossier.",
+      },
+      {
+        id: "m-consult-list",
+        titre: "Suivre les demandes de consultation",
+        aFaire: [
+          "Ouvrir les Demandes de consultation.",
+          "Parcourir la file A decider (et, pour un admin, l'onglet Mes demandes).",
+        ],
+        attendu:
+          "Les demandes s'affichent avec leur statut (en attente, active, expiree, refusee).",
       },
     ],
   },

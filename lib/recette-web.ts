@@ -31,6 +31,28 @@ export const WEB_SECTIONS: Section[] = [
         attendu:
           "La liste s'affiche (onglets Toutes et Non lues) et le compteur de la cloche se met a jour.",
       },
+      {
+        id: "w-profil",
+        titre: "Consulter et mettre a jour son profil",
+        aFaire: [
+          "Ouvrir son profil.",
+          "Verifier ses informations (nom, email, role, manager).",
+          "Modifier son profil metier, puis enregistrer.",
+        ],
+        attendu:
+          "Les informations du compte sont correctes. La mise a jour du profil metier est enregistree, et les statistiques d'activite recente s'affichent.",
+      },
+      {
+        id: "w-dossier-detail",
+        titre: "Consulter le detail d'un dossier",
+        aFaire: [
+          "Ouvrir la liste des dossiers.",
+          "Ouvrir un dossier.",
+          "Parcourir les onglets Informations, Equipe et Historique.",
+        ],
+        attendu:
+          "Le dossier s'affiche avec ses informations, son equipe et son historique.",
+      },
     ],
   },
 
@@ -127,6 +149,28 @@ export const WEB_SECTIONS: Section[] = [
         attendu:
           "Les indicateurs de l'equipe s'affichent. Le tableau de bord est reserve aux managers et aux admins : un collaborateur ne le voit pas dans le menu.",
       },
+      {
+        id: "w-dossier-attach",
+        titre: "Joindre des fichiers a un dossier",
+        aFaire: [
+          "Ouvrir un dossier, onglet Pieces jointes.",
+          "Deposer un fichier (glisser-deposer ou parcourir).",
+          "Ouvrir l'apercu du fichier, puis le supprimer si besoin.",
+        ],
+        attendu:
+          "Le fichier est ajoute au dossier, l'apercu s'affiche et la suppression fonctionne.",
+      },
+      {
+        id: "w-consult-decide",
+        titre: "Decider une demande de consultation",
+        aFaire: [
+          "Ouvrir les Demandes de consultation, onglet A decider.",
+          "Ouvrir une demande recue.",
+          "Cliquer Approuver ou Refuser.",
+        ],
+        attendu:
+          "La decision est enregistree. Si approuvee, le demandeur obtient l'acces au contenu pour une duree limitee.",
+      },
     ],
   },
 
@@ -175,6 +219,50 @@ export const WEB_SECTIONS: Section[] = [
         ],
         attendu:
           "Le contenu detaille (commentaire et pieces jointes) reste masque derriere un bandeau Contenu restreint tant que la demande n'est pas approuvee.",
+      },
+      {
+        id: "w-dossier-note",
+        titre: "Publier une note sur un dossier",
+        aFaire: [
+          "Ouvrir un dossier, onglet Notes admin.",
+          "Cliquer Publier une note, ecrire la note, puis publier.",
+        ],
+        attendu:
+          "La note est publiee sur le dossier et visible par le manager et les collaborateurs concernes.",
+      },
+      {
+        id: "w-users",
+        titre: "Gerer les utilisateurs",
+        aFaire: [
+          "Ouvrir la liste des utilisateurs.",
+          "Creer un utilisateur.",
+          "Ouvrir un utilisateur, modifier ses informations, changer son role ou son manager.",
+          "Desactiver puis reactiver un utilisateur.",
+        ],
+        attendu:
+          "Les utilisateurs se creent et se modifient. Le changement de role ou de manager est pris en compte. Un utilisateur desactive ne peut plus se connecter.",
+      },
+      {
+        id: "w-permissions",
+        titre: "Gerer les droits d'un utilisateur",
+        aFaire: [
+          "Ouvrir la page des permissions.",
+          "Accorder un droit a un utilisateur (choisir la ressource, l'action, l'echeance).",
+          "Revoquer un droit accorde.",
+        ],
+        attendu:
+          "Le droit est accorde ou revoque, et l'utilisateur gagne ou perd l'acces correspondant.",
+      },
+      {
+        id: "w-referentiels",
+        titre: "Gerer les listes de reference",
+        aFaire: [
+          "Ouvrir la page des referentiels.",
+          "Ajouter une entree (par exemple un type d'activite).",
+          "Modifier une entree, puis en desactiver une.",
+        ],
+        attendu:
+          "Les entrees se creent, se modifient et se desactivent. Elles alimentent les listes deroulantes des formulaires.",
       },
     ],
   },
