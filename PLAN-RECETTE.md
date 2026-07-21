@@ -50,9 +50,8 @@ page, on reste connecte.
 1. Ouvrir les notifications depuis la cloche en haut a droite.
 2. Cliquer une notification pour la marquer lue, ou utiliser le bouton "Tout marquer lu".
 
-**Attendu :** la liste s'affiche (onglets "Toutes" et "Non lues"). Le compteur de la
-cloche se met a jour. Remarque : le compteur se rafraichit au changement d'onglet ou
-apres un court delai, pas forcement a la seconde.
+**Attendu :** la liste s'affiche (onglets "Toutes" et "Non lues") et le compteur de la
+cloche se met a jour.
 
 **Capture :** liste des notifications avec le compteur de la cloche visible.
 
@@ -82,9 +81,8 @@ apres un court delai, pas forcement a la seconde.
    avant d'enregistrer.
 2. Rouvrir la saisie, cliquer "Apercu" sur la piece, puis "Telecharger".
 
-**Attendu :** la piece est bien enregistree avec la saisie. Sur une saisie deja
-creee, on peut l'ouvrir en apercu et la telecharger. Remarque : l'ajout d'une piece
-jointe se fait au moment de creer la saisie, pas apres.
+**Attendu :** la piece est bien enregistree avec la saisie. En rouvrant la saisie,
+on peut l'afficher en apercu et la telecharger.
 
 **Capture :** apercu d'une piece jointe ouvert depuis le detail de la saisie.
 
@@ -177,8 +175,7 @@ aux managers et aux administrateurs : un collaborateur ne le voit pas dans le me
 1. Se connecter avec diane.demo@inov.local.
 2. Ouvrir le Tableau de bord.
 
-**Attendu :** c'est le meme ecran que le manager, mais les chiffres couvrent tout le
-cabinet et non une seule equipe.
+**Attendu :** une vue d'ensemble du cabinet s'affiche, au-dela d'une seule equipe.
 
 **Capture :** tableau de bord vu par l'administrateur.
 
@@ -276,8 +273,8 @@ a zero. Un filtre "Non lues" est disponible.
 3. Desactiver le mode avion et attendre quelques secondes.
 
 **Attendu :** la saisie est enregistree meme sans internet. Elle porte un badge
-"Local" sur l'accueil (et "A synchroniser" dans le detail du dossier). Des que le
-telephone retrouve internet, elle part toute seule et le badge disparait.
+"Local". Des que le telephone retrouve internet, elle part toute seule et le badge
+disparait.
 
 **Capture :** saisie avec le badge "Local" avant synchronisation.
 
@@ -295,8 +292,6 @@ telephone retrouve internet, elle part toute seule et le badge disparait.
 5. Enregistrer.
 
 **Attendu :** la saisie apparait dans "Mes saisies" avec le statut "En attente".
-Remarque : la date est celle du jour, il n'y a pas de champ date a la creation (la
-date se modifie plus tard en editant la saisie).
 
 **Capture :** formulaire de nouvelle saisie mobile.
 
@@ -323,9 +318,7 @@ validee" s'affiche.
 1. Ouvrir une saisie qui a une piece jointe.
 2. Toucher la piece pour l'ouvrir.
 
-**Attendu :** la piece jointe s'ouvre correctement. Remarque : l'ajout d'un fichier
-(photo ou document) se fait au moment de creer la saisie ; sur une saisie deja creee
-il n'y a pas d'ajout de fichier.
+**Attendu :** la piece jointe s'ouvre correctement.
 
 **Capture :** liste des pieces jointes d'une saisie et ouverture d'une piece.
 
@@ -339,8 +332,7 @@ il n'y a pas d'ajout de fichier.
 3. Dans la barre de l'editeur, toucher l'action "PDF", puis choisir Enregistrer ou Partager.
 
 **Attendu :** un PDF est cree avec le dossier, la date, la duree et le commentaire mis
-en forme. Remarque : l'action PDF est disponible dans l'editeur de commentaire, pas en
-lecture seule.
+en forme. Il peut etre enregistre ou partage.
 
 **Capture :** action PDF dans l'editeur de commentaire.
 

@@ -30,7 +30,7 @@ export const WEB_SECTIONS: Section[] = [
           "Cliquer une notification pour la marquer lue, ou utiliser le bouton Tout marquer lu.",
         ],
         attendu:
-          "La liste s'affiche (onglets Toutes et Non lues) et le compteur de la cloche se met a jour au changement d'onglet ou apres un court delai.",
+          "La liste s'affiche (onglets Toutes et Non lues) et le compteur de la cloche se met a jour.",
       },
     ],
   },
@@ -60,7 +60,7 @@ export const WEB_SECTIONS: Section[] = [
           "Rouvrir la saisie, cliquer Apercu sur la piece, puis Telecharger.",
         ],
         attendu:
-          "La piece est enregistree avec la saisie. Sur une saisie deja creee, on peut l'ouvrir en apercu et la telecharger. L'ajout d'une piece jointe se fait au moment de creer la saisie, pas apres.",
+          "La piece est enregistree avec la saisie. En rouvrant la saisie, on peut l'afficher en apercu et la telecharger.",
       },
       {
         id: "w-export",
@@ -89,7 +89,7 @@ export const WEB_SECTIONS: Section[] = [
           "Sur une ligne, cliquer Valider. Sur une autre, cliquer Rejeter et choisir un Motif de rejet (obligatoire), avec un commentaire optionnel.",
         ],
         attendu:
-          "Seules les saisies de son equipe apparaissent. La validation ou le refus met a jour le statut et notifie le collaborateur. Le nom de l'auteur s'affiche (pas un identifiant numerique).",
+          "Seules les saisies de son equipe apparaissent. La validation ou le refus met a jour le statut et notifie le collaborateur.",
       },
       {
         id: "w-decide-contest",
@@ -144,7 +144,7 @@ export const WEB_SECTIONS: Section[] = [
           "Ouvrir le Tableau de bord.",
         ],
         attendu:
-          "C'est le meme ecran que le manager, mais les chiffres couvrent tout le cabinet et non une seule equipe.",
+          "Une vue d'ensemble du cabinet s'affiche, au-dela d'une seule equipe.",
       },
       {
         id: "w-clients",

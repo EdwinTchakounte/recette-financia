@@ -53,7 +53,7 @@ export const MOBILE_SECTIONS: Section[] = [
           "Desactiver le mode avion et attendre quelques secondes.",
         ],
         attendu:
-          "La saisie est enregistree meme sans internet : elle porte un badge Local sur l'accueil (et A synchroniser dans le detail du dossier). Des que le telephone retrouve internet, elle part toute seule et le badge disparait.",
+          "La saisie est enregistree meme sans internet : elle porte un badge Local. Des que le telephone retrouve internet, elle part toute seule et le badge disparait.",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const MOBILE_SECTIONS: Section[] = [
           "Enregistrer.",
         ],
         attendu:
-          "La saisie apparait dans Mes saisies avec le statut En attente. Il n'y a pas de champ date a la creation : la date est celle du jour (elle se modifie plus tard en editant la saisie).",
+          "La saisie apparait dans Mes saisies avec le statut En attente.",
       },
       {
         id: "m-saisie-edit",
@@ -95,7 +95,7 @@ export const MOBILE_SECTIONS: Section[] = [
           "Toucher la piece pour l'ouvrir.",
         ],
         attendu:
-          "La piece jointe s'ouvre correctement. L'ajout d'un fichier (photo ou document) se fait au moment de creer la saisie ; sur une saisie deja creee il n'y a pas d'ajout de fichier.",
+          "La piece jointe s'ouvre correctement.",
       },
       {
         id: "m-pdf",
@@ -106,7 +106,7 @@ export const MOBILE_SECTIONS: Section[] = [
           "Dans la barre de l'editeur, toucher l'action PDF, puis choisir Enregistrer ou Partager.",
         ],
         attendu:
-          "Un PDF est cree avec le dossier, la date, la duree et le commentaire mis en forme. L'action PDF est disponible dans l'editeur de commentaire, pas en lecture seule.",
+          "Un PDF est cree avec le dossier, la date, la duree et le commentaire mis en forme. Il peut etre enregistre ou partage.",
       },
       {
         id: "m-contest",

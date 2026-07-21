@@ -76,13 +76,13 @@ export const NON_COUVERT: Record<Plateforme, NonCouvert[]> = {
       id: "w-nc-saisie-edit",
       titre: "Modifier ou supprimer une saisie",
       detail:
-        "L'edition et la suppression d'une saisie ne sont pas encore disponibles sur le site web (elles existent sur l'application mobile). Sur le web, une saisie se consulte mais ne se modifie pas.",
+        "Sur le site web, une saisie se consulte mais ne se modifie pas encore ; l'edition et la suppression se font sur l'application mobile.",
     },
     {
       id: "w-nc-contest",
       titre: "Contester le refus d'une saisie",
       detail:
-        "Le depot d'une contestation se fait sur l'application mobile. Le site web permet seulement de suivre ses contestations et, cote manager, de les traiter.",
+        "Le depot d'une contestation se fait sur l'application mobile ; le site web permet de suivre ses contestations et, cote manager, de les traiter.",
     },
   ],
   mobile: [
@@ -90,7 +90,7 @@ export const NON_COUVERT: Record<Plateforme, NonCouvert[]> = {
       id: "m-nc-admin-note",
       titre: "Ajouter une note sur un dossier",
       detail:
-        "L'application mobile affiche les notes d'un dossier mais ne permet pas encore d'en ajouter. La creation d'une note n'est pas disponible.",
+        "L'application mobile affiche les notes d'un dossier mais ne permet pas encore d'en ajouter.",
     },
   ],
 };
