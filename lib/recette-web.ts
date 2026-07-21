@@ -1,10 +1,13 @@
 // SITE WEB (back-office) — cas de test en langage simple.
 // Un seul mot de passe pour tous les comptes : Demo2026!
+//
+// Ne couvre que des fonctionnalites reellement presentes dans le code.
+// Ce qui n'est pas encore disponible est liste dans NON_COUVERT (recette.ts).
 
 import type { Section } from "./recette-types";
 
 export const WEB_SECTIONS: Section[] = [
-  // ------------------------------------------------------------------ Tous
+  // Tous
   {
     profil: "tous",
     titre: "Connexion et notifications",
@@ -14,25 +17,25 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Se connecter au site",
         aFaire: [
           "Ouvrir le site.",
-          "Se connecter avec un compte de test.",
+          "Se connecter avec un compte de test via l'ecran Keycloak.",
         ],
         attendu:
-          "L'accueil s'affiche selon le role du compte. En rechargeant la page, on reste connecte.",
+          "L'accueil s'affiche selon le role : Administrateur et Manager arrivent sur le Tableau de bord, Collaborateur sur la liste des saisies. En rechargeant la page, on reste connecte.",
       },
       {
         id: "w-notifs",
         titre: "Consulter ses notifications",
         aFaire: [
-          "Ouvrir les notifications.",
-          "Marquer une notification (ou toutes) comme lue.",
+          "Ouvrir les notifications depuis la cloche en haut a droite.",
+          "Cliquer une notification pour la marquer lue, ou utiliser le bouton Tout marquer lu.",
         ],
         attendu:
-          "La liste des notifications s'affiche et le compteur de non-lues se met a jour.",
+          "La liste s'affiche (onglets Toutes et Non lues) et le compteur de la cloche se met a jour au changement d'onglet ou apres un court delai.",
       },
     ],
   },
 
-  // ---------------------------------------------------------- Collaborateur
+  // Collaborateur
   {
     profil: "collaborateur",
     titre: "Saisir et suivre ses activites",
@@ -42,58 +45,37 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Saisir une activite",
         aFaire: [
           "Se connecter avec alice.demo@inov.local.",
-          "Ouvrir Nouvelle saisie.",
-          "Choisir un dossier et un type d'activite, indiquer une duree et une date, ecrire un commentaire.",
-          "Enregistrer.",
+          "Cliquer Nouvelle saisie.",
+          "Renseigner : Date (par defaut aujourd'hui), Dossier, Type d'activite, Duree en minutes (entre 5 et 480), et un Commentaire si besoin.",
+          "Cliquer Enregistrer.",
         ],
         attendu:
-          "La saisie apparait dans la liste des saisies avec le statut En attente.",
-      },
-      {
-        id: "w-saisie-edit",
-        titre: "Modifier ou supprimer sa saisie",
-        aFaire: [
-          "Ouvrir une de ses saisies En attente.",
-          "Modifier une information et enregistrer.",
-        ],
-        attendu:
-          "La modification est enregistree. Une saisie deja Validee ne peut plus etre modifiee.",
+          "La saisie apparait dans la liste avec le statut En attente.",
       },
       {
         id: "w-attach",
-        titre: "Ajouter et telecharger des pieces jointes",
+        titre: "Joindre un fichier et le telecharger",
         aFaire: [
-          "Ouvrir une saisie.",
-          "Ajouter une piece jointe (image ou PDF).",
-          "Ouvrir l'apercu de la piece, puis la telecharger.",
+          "Dans le formulaire Nouvelle saisie, ajouter une piece jointe (image ou PDF) avant d'enregistrer.",
+          "Rouvrir la saisie, cliquer Apercu sur la piece, puis Telecharger.",
         ],
         attendu:
-          "La piece jointe s'ajoute, l'apercu s'affiche et le telechargement fonctionne.",
+          "La piece est enregistree avec la saisie. Sur une saisie deja creee, on peut l'ouvrir en apercu et la telecharger. L'ajout d'une piece jointe se fait au moment de creer la saisie, pas apres.",
       },
       {
         id: "w-export",
         titre: "Exporter la liste en CSV et PDF",
         aFaire: [
-          "Ouvrir la liste des saisies.",
+          "Ouvrir la liste des saisies, appliquer un filtre si besoin (statut, dossier, dates).",
           "Cliquer Export CSV, puis Export PDF.",
         ],
         attendu:
-          "Deux fichiers se telechargent, correspondant a la liste affichee (avec les filtres en cours).",
-      },
-      {
-        id: "w-contest",
-        titre: "Contester le refus d'une saisie",
-        aFaire: [
-          "Ouvrir une saisie Rejetee.",
-          "Cliquer Contester, indiquer un motif, envoyer.",
-        ],
-        attendu:
-          "La contestation part au manager et apparait dans le suivi de ses contestations.",
+          "Deux fichiers se telechargent, correspondant a la liste affichee avec les filtres et les colonnes visibles en cours.",
       },
     ],
   },
 
-  // ---------------------------------------------------------------- Manager
+  // Manager
   {
     profil: "manager",
     titre: "Valider, piloter et gerer les dossiers",
@@ -103,37 +85,38 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Valider ou refuser les saisies de l'equipe",
         aFaire: [
           "Se connecter avec marie.demo@inov.local.",
-          "Ouvrir les saisies a valider.",
-          "Valider une saisie, en refuser une autre avec un motif.",
+          "Ouvrir File de validation (liste filtree sur les saisies En attente).",
+          "Sur une ligne, cliquer Valider. Sur une autre, cliquer Rejeter et choisir un Motif de rejet (obligatoire), avec un commentaire optionnel.",
         ],
         attendu:
-          "Seules les saisies de son equipe apparaissent. La validation ou le refus met a jour le statut et notifie le collaborateur.",
+          "Seules les saisies de son equipe apparaissent. La validation ou le refus met a jour le statut et notifie le collaborateur. Le nom de l'auteur s'affiche (pas un identifiant numerique).",
       },
       {
         id: "w-decide-contest",
         titre: "Traiter les contestations",
         aFaire: [
-          "Ouvrir une contestation recue.",
-          "Accepter ou refuser.",
+          "Ouvrir les Contestations, onglet A decider.",
+          "Cliquer Decider sur une contestation, puis choisir Accepter ou Refuser.",
         ],
         attendu:
-          "La decision est enregistree. Si acceptee, la saisie revient En attente.",
+          "La decision est enregistree. Si acceptee, la saisie repasse En attente.",
       },
       {
         id: "w-dossier",
         titre: "Creer ou modifier un dossier",
         aFaire: [
           "Ouvrir la liste des dossiers.",
-          "Creer un dossier ou en modifier un, puis enregistrer.",
+          "Creer un dossier, ou en ouvrir un et cliquer Modifier, puis enregistrer.",
         ],
-        attendu: "Le dossier est cree ou mis a jour.",
+        attendu:
+          "Le dossier est cree ou mis a jour. Le bouton Modifier n'apparait que si le manager a le droit sur ce dossier.",
       },
       {
         id: "w-dossier-collab",
         titre: "Affecter des collaborateurs a un dossier",
         aFaire: [
-          "Ouvrir un dossier.",
-          "Ajouter ou retirer des collaborateurs.",
+          "Ouvrir un dossier, onglet Equipe.",
+          "Cliquer Ajouter un collaborateur, ou retirer un collaborateur via l'icone corbeille.",
         ],
         attendu:
           "Les collaborateurs affectes peuvent saisir sur ce dossier.",
@@ -143,33 +126,33 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Consulter le tableau de bord",
         aFaire: ["Ouvrir le Tableau de bord."],
         attendu:
-          "Les indicateurs de l'equipe s'affichent. Le tableau de bord est reserve aux managers et aux admins : un collaborateur ne le voit pas.",
+          "Les indicateurs de l'equipe s'affichent. Le tableau de bord est reserve aux managers et aux admins : un collaborateur ne le voit pas dans le menu.",
       },
     ],
   },
 
-  // ------------------------------------------------------------------ Admin
+  // Admin
   {
     profil: "admin",
     titre: "Administration du cabinet",
     cas: [
       {
         id: "w-admin-dashboard",
-        titre: "Voir le tableau de bord du cabinet",
+        titre: "Voir le tableau de bord a l'echelle du cabinet",
         aFaire: [
           "Se connecter avec diane.demo@inov.local.",
-          "Ouvrir le tableau de bord.",
+          "Ouvrir le Tableau de bord.",
         ],
         attendu:
-          "Une vue d'ensemble du cabinet s'affiche (au-dela d'une seule equipe).",
+          "C'est le meme ecran que le manager, mais les chiffres couvrent tout le cabinet et non une seule equipe.",
       },
       {
         id: "w-clients",
         titre: "Gerer les clients et exporter leur activite",
         aFaire: [
           "Ouvrir la liste des clients.",
-          "Creer ou modifier un client.",
-          "Exporter l'activite d'un client en PDF.",
+          "Cliquer Nouveau client, ou Modifier un client existant.",
+          "Sur une ligne client, cliquer l'action Exporter l'activite en PDF.",
         ],
         attendu:
           "Les clients se creent et se modifient. L'export PDF de l'activite d'un client se telecharge.",
@@ -179,7 +162,7 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Consulter le journal d'audit",
         aFaire: [
           "Ouvrir le Journal d'audit.",
-          "Exporter en CSV ou en PDF.",
+          "Cliquer Export CSV, puis Export PDF.",
         ],
         attendu:
           "Les evenements s'affichent et l'export se telecharge.",
@@ -189,10 +172,10 @@ export const WEB_SECTIONS: Section[] = [
         titre: "Demander la consultation d'une saisie",
         aFaire: [
           "Ouvrir une saisie d'un collaborateur.",
-          "Demander l'acces au contenu confidentiel.",
+          "Cliquer Faire une demande de consultation et saisir une justification.",
         ],
         attendu:
-          "Le contenu detaille reste masque tant que la demande n'est pas approuvee.",
+          "Le contenu detaille (commentaire et pieces jointes) reste masque derriere un bandeau Contenu restreint tant que la demande n'est pas approuvee.",
       },
     ],
   },

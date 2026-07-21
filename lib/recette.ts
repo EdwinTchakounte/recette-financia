@@ -4,11 +4,11 @@
 // recette-mobile.ts. Ils ne couvrent que des fonctionnalites reellement
 // presentes dans l'application, ecrites en langage simple pour un testeur.
 
-import type { Plateforme, Profil, Section, Compte } from "./recette-types";
+import type { Plateforme, Profil, Section, Compte, NonCouvert } from "./recette-types";
 import { WEB_SECTIONS } from "./recette-web";
 import { MOBILE_SECTIONS } from "./recette-mobile";
 
-export type { Plateforme, Profil, Statut, CasTest, Section, Compte } from "./recette-types";
+export type { Plateforme, Profil, Statut, CasTest, Section, Compte, NonCouvert } from "./recette-types";
 
 export const PROFIL_LABEL: Record<Profil, string> = {
   tous: "Tout le monde",
@@ -66,4 +66,31 @@ export const CONSIGNES =
 export const RECETTE: Record<Plateforme, Section[]> = {
   web: WEB_SECTIONS,
   mobile: MOBILE_SECTIONS,
+};
+
+// Fonctionnalites pas encore disponibles, listees a titre informatif (pas de
+// test a cocher). Elles existent parfois sur l'autre plateforme.
+export const NON_COUVERT: Record<Plateforme, NonCouvert[]> = {
+  web: [
+    {
+      id: "w-nc-saisie-edit",
+      titre: "Modifier ou supprimer une saisie",
+      detail:
+        "L'edition et la suppression d'une saisie ne sont pas encore disponibles sur le site web (elles existent sur l'application mobile). Sur le web, une saisie se consulte mais ne se modifie pas.",
+    },
+    {
+      id: "w-nc-contest",
+      titre: "Contester le refus d'une saisie",
+      detail:
+        "Le depot d'une contestation se fait sur l'application mobile. Le site web permet seulement de suivre ses contestations et, cote manager, de les traiter.",
+    },
+  ],
+  mobile: [
+    {
+      id: "m-nc-admin-note",
+      titre: "Ajouter une note sur un dossier",
+      detail:
+        "L'application mobile affiche les notes d'un dossier mais ne permet pas encore d'en ajouter. La creation d'une note n'est pas disponible.",
+    },
+  ],
 };
